@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Ballet Home</title>
+</head>
+<body>
+
+  <header>
+    <div class="row">
+        <div class="column">
+            <img src="images/logo.png" alt="logo" width="100px" height="100px">  
+    </div>
+    <div class="column">
+        <h1>Learn and Revise Ballet Movements and Terminology </h1>
+        <em>With Shalome!</em>
+    </div>
+    <div class="column">
+        <div class="topnav">
+            <a  href="home.html">Home</a>  
+                <div class="dropdown">
+                    <div class="dropbtn">Browse Movements</div>
+                    <div class="dropdown-content">
+                      <a href="Barre.html">Barre Exercises</a>
+                      <a href="positions.html">Positions</a>  
+                      <a href="turning.html">Pirouettes</a>
+                      <a href="jumping.html">Jumping</a>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <div class="dropbtn">Quiz</div>
+                    <div class="dropdown-content">
+                      <a href="LEVEL1.html">Level 1</a>
+                      <a href="LEVEL 2.html">Level 2</a>
+                      <a href="LEVEL3.html">Level 3</a>
+                    </div>
+                  </div>
+    
+    </div>
+</header>
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Images with hyperlinked text -->
+    <div class="mySlides fade">
+      <img src="images/girls at barre.jpg" style="width:100%">
+      <div class="text"><a href="Barre.html">Barre Exercises!</a></div>
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="images/girls doing splits.jpg" style="width:100%">
+      <div class="text"> <a href="LEVEL1.html">Take a Level 1 Quiz!</a></div>
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="images/trio.jpg" style="width:100%">
+      <div class="text"><a href="LEVEL3.html">Take a Level 3 Quiz!</a></div>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The indicating dots -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <script>
+      var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+  </script>
+
+
+
+<section> <!--About me -->
+    <div class="row">
+        <div class="column">
+            <h3>
+                About Me
+            </h3>
+            <p>Hi! I'm Shalome. I've studied ballet under Madam Olena for over six years. 
+                <br> During my time as a student, I also worked as a teacher for the younger classes. <br> I've placed in national competions in Delhi and Mumbai. <br> I can't wait to teach you how to dance Ballet! </p>
+        </div>    
+        <div class="column">
+            <img src="images/about me.jpg" alt="image of Shalome" width="500px">
+        </div>
+    </div>
+
+    
+</section>
+
+</body>
+</html>
